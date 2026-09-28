@@ -6,7 +6,7 @@ letter — they get an old PC.
 They switch it on and it boots, dials up to AOL, and signs them in. On the desktop
 there's one unread message. Almost everything else on the machine is a decoy: open
 Minesweeper, My Computer or the Recycle Bin and Windows 98 throws the classic
-*"This program has performed an illegal operation and will be shut down."*
+_"This program has performed an illegal operation and will be shut down."_
 
 The recipient's desktop is deliberately functionless — just the letter. **Your own
 machine is the one that works**, and it's behind a password: sign in and you get
@@ -17,11 +17,11 @@ Letterdrop composer itself, and — if you're an admin — user account manageme
 
 The desktop is the whole site. Open it and you get Windows 98:
 
-| URL | What you get |
-| --- | --- |
-| `/` | The desktop. Sign in to use the programs. |
-| `/<token>` | A shared file, straight to the bytes |
-| `/s/<token>` | The share page for a link preview |
+| URL          | What you get                              |
+| ------------ | ----------------------------------------- |
+| `/`          | The desktop. Sign in to use the programs. |
+| `/<token>`   | A shared file, straight to the bytes      |
+| `/s/<token>` | The share page for a link preview         |
 
 There used to be a second, separate compose page, and letters used to be encoded
 into the URL. Both are gone: mail between accounts replaced them.
@@ -66,7 +66,7 @@ whenever a new session is created.
 
 Sign-ins are throttled per account and client address. The first three failures are
 free; after that each attempt waits longer, and after six the account is locked for
-15 minutes. The lockout applies to the *right* password too, so a bot cannot simply
+15 minutes. The lockout applies to the _right_ password too, so a bot cannot simply
 keep guessing.
 
 The throttle key is the account plus the client address. `X-Forwarded-For` is
@@ -134,7 +134,7 @@ dedicated suite that attacks every entry point with nine different traversal sha
   somebody once sent you.
 - **People** — other accounts, ready to write to.
 
-Results are grouped and show *why* they matched, with a snippet of the surrounding
+Results are grouped and show _why_ they matched, with a snippet of the surrounding
 text. The tabs narrow to one kind. Searching is scoped to the caller on the server:
 root searching for a word in alice's private note finds nothing.
 
@@ -142,12 +142,12 @@ root searching for a word in alice's private note finds nothing.
 
 Two roles, enforced on the server rather than in the browser:
 
-| | user | admin |
-| --- | --- | --- |
-| Own notes and images | read / write / delete | read / write / delete |
-| Other people's files | ✗ | read / write / delete |
-| Create accounts | ✗ | ✓ |
-| Delete accounts, reset passwords, change roles | ✗ | ✓ |
+|                                                | user                  | admin                 |
+| ---------------------------------------------- | --------------------- | --------------------- |
+| Own notes and images                           | read / write / delete | read / write / delete |
+| Other people's files                           | ✗                     | read / write / delete |
+| Create accounts                                | ✗                     | ✓                     |
+| Delete accounts, reset passwords, change roles | ✗                     | ✓                     |
 
 Each user's files live in `data/files/<userId>/`, and every request is checked
 against the session — passing someone else's id returns **403**, not their data.
@@ -164,20 +164,20 @@ that person to choose a new one.
 - **Notepad that saves** — write a note, press Save (or `Ctrl+S`), and it lands in
   your own folder. Reopen it from My Documents and the text comes back.
 - **My Documents as a file manager** — folders, rename, move, delete, and uploads of
-  any type up to a configurable size. Per-user, on disk. See *The file manager* below.
+  any type up to a configurable size. Per-user, on disk. See _The file manager_ below.
 - **A storage quota per account** — with a usage bar, and uploads refused before they
-  can overshoot. See *Storage and quotas* below.
+  can overshoot. See _Storage and quotas_ below.
 - **Find** — one search across your files, the text inside your notes, your mail and
-  letters, and the other accounts. See *Find* below.
+  letters, and the other accounts. See _Find_ below.
 - **Public sharing** — share any file and get an unguessable link that anyone can
   open, with Open Graph tags so Discord and Slack render a real image embed.
-  Revoke it at any time. See *Sharing* below.
+  Revoke it at any time. See _Sharing_ below.
 - **Internal mail** — send messages to other accounts on this machine. Inbox, Sent
   and Deleted Items, unread counts in the system tray, replies, and attachments
   drawn from your own Documents.
 - **AIM, for real** — instant messaging between accounts over a WebSocket, with a
   buddy list, online/offline presence, typing indicators, read receipts and stored
-  history. See *AIM* below.
+  history. See _AIM_ below.
 - **User Accounts (admins)** — create and delete accounts, reset passwords, promote
   and demote, and browse any user's folder.
 - **The composer, in the desktop** — Letterdrop itself runs as a Win98 window, so
@@ -190,7 +190,7 @@ that person to choose a new one.
   default), share it with a six-character link, and play audio and video right
   in the desktop.
 - **Letters** — messages with an animated shape and enclosed images and songs the
-  reader plays in place. Shareable as a read-only page. See *Letters* below.
+  reader plays in place. Shareable as a read-only page. See _Letters_ below.
 - **Invitations** — admins issue one-use links that create an account and deliver
   the letter into the new Inbox.
 - **Profile pictures** — everyone can set their own.
@@ -246,7 +246,7 @@ Audio and video also honour **range requests**, so seeking works.
   like `files.example.com/alb5fz.jpg` rather than `127.0.0.1:8000/alb5fz.jpg`: the
   short host needs a domain.
 - **Discord caches embeds hard.** Revoking stops the link working immediately, but a
-  preview already cached may linger. Re-sharing mints a *new* token, so the old
+  preview already cached may linger. Re-sharing mints a _new_ token, so the old
   cached preview will not update.
 - **Only the owner can share.** An admin browsing someone else's folder can read it
   but cannot publish it on their behalf.
@@ -260,7 +260,7 @@ Audio and video also honour **range requests**, so seeking works.
 not real email — nothing leaves the machine.
 
 - **New Message** composes. The **To** field autocompletes as you type: names that
-  *start* with what you typed come first, then names that merely contain it. Arrow
+  _start_ with what you typed come first, then names that merely contain it. Arrow
   keys move, Enter takes the highlighted one, Escape closes.
 - **Several recipients.** Separate names with commas or semicolons — "alice, bob" —
   and the autocomplete fills in the one you are typing without disturbing the rest.
@@ -277,22 +277,22 @@ not real email — nothing leaves the machine.
 - **Inbox / Sent Items / Deleted Items.** Deleting is per-side: removing a message
   from your Inbox leaves the sender's copy of it alone.
 - Unread counts appear in the system tray, and update when you send or read. New
-  mail *dings* — only when the count rises, so reading your post is silent.
+  mail _dings_ — only when the count rises, so reading your post is silent.
 
 ## Keyboard shortcuts
 
 The desktop behaves like the machine it is imitating:
 
-| Keys | What it does |
-| --- | --- |
-| `Ctrl+Tab` / `Alt+Tab` | Cycle between open windows (`Shift` to go back) |
-| `Ctrl+A` | Select every row in the list in front |
-| `Ctrl` / `Shift` + click | Toggle one row, or extend a selection over a range |
-| `Delete` | Delete the selected rows, after one confirmation |
-| `Ctrl+N` | New item in whatever is in front — a message, a folder |
-| `F5` | Refresh the front window |
-| `Ctrl+M` / `Ctrl+W` | Minimise / close the front window |
-| `Escape` | Close the front window |
+| Keys                     | What it does                                           |
+| ------------------------ | ------------------------------------------------------ |
+| `Ctrl+Tab` / `Alt+Tab`   | Cycle between open windows (`Shift` to go back)        |
+| `Ctrl+A`                 | Select every row in the list in front                  |
+| `Ctrl` / `Shift` + click | Toggle one row, or extend a selection over a range     |
+| `Delete`                 | Delete the selected rows, after one confirmation       |
+| `Ctrl+N`                 | New item in whatever is in front — a message, a folder |
+| `F5`                     | Refresh the front window                               |
+| `Ctrl+M` / `Ctrl+W`      | Minimise / close the front window                      |
+| `Escape`                 | Close the front window                                 |
 
 Each one stands aside when it would get in the way: `Tab` still means "next field"
 while you are typing, `Escape` leaves an open dialog to handle its own, and `Ctrl+A`
@@ -310,12 +310,12 @@ play in place; anything else offers a download.
 
 The shape is the real renderer, turning in the letter window:
 
-| Shape | What it is |
-| --- | --- |
-| **Heart (text)** | `LOVE.TXT` — revealed a line at a time, then held |
-| **Donut (text)** | `DONUT.TXT` — the same, a ring |
-| **Heart (3D)** | A solid, shaded heart that yaws so you can see it has depth |
-| **Donut (3D)** | The classic spinning torus, z-buffered and lit |
+| Shape            | What it is                                                  |
+| ---------------- | ----------------------------------------------------------- |
+| **Heart (text)** | `LOVE.TXT` — revealed a line at a time, then held           |
+| **Donut (text)** | `DONUT.TXT` — the same, a ring                              |
+| **Heart (3D)**   | A solid, shaded heart that yaws so you can see it has depth |
+| **Donut (3D)**   | The classic spinning torus, z-buffered and lit              |
 
 All four are drawn in `ascii.js` with no dependencies. The 3D pair use the
 [Andy Sloane](https://www.a1k0n.net/2011/07/20/donut-math.html) technique:
@@ -355,7 +355,7 @@ The link is single-use and **expires after a week**, and admins can revoke an un
 one from **Start → Invitations**. Redemption is atomic: the token is checked and
 consumed in one synchronous pass, so two people racing the same link cannot both
 succeed. It is also refused outright if sign-ups are switched off in the Control
-Panel, and a weak password is rejected *without* burning the invitation.
+Panel, and a weak password is rejected _without_ burning the invitation.
 
 The page is a real desktop rather than a bare form, so the first thing a new person
 sees is the machine their letter lives on. Every outcome — an unknown link, an
@@ -374,24 +374,24 @@ name on shared letters where there is no session.
 ## The programs
 
 Most things on the desktop are decoys — open Solitaire or 3D Pinball and Windows 98
-throws the classic *"This program has performed an illegal operation."* These are the
+throws the classic _"This program has performed an illegal operation."_ These are the
 ones that actually work:
 
-| Program | What it does |
-| --- | --- |
-| **Calculator** | Four-function arithmetic with memory, `sqrt`, sign flip and a working keyboard |
-| **MS-DOS Prompt** | A real shell over your file store: `DIR`, `TYPE`, `DEL`, `VER`, `DATE`, `ECHO`, `CLS` |
-| **Notepad** | Opens and saves `.txt` notes, with a folder browser on Save As |
-| **Paint** | Canvas drawing — 20 colours, 4 brush sizes, eraser, plus open and save to your Documents |
-| **Minesweeper** | The actual game: 9×9 with 10 mines, flood reveal, right-click flags, and a first click that is never a mine |
-| **Pipes** | Turn pipe pieces until the water reaches every outlet |
-| **My Computer** | Drives and folders; C: is your own file store |
-| **Recycle Bin** | Honest about being empty — deleted files are gone, not recoverable |
-| **Network Neighbourhood** | The other accounts on this machine; open one and browse their folder |
-| **Winamp** | Plays the mp3s and mp4s in your Documents, with seeking |
-| **Control Panel** | Admins: site settings, per-program switches, storage, and the destructive actions |
+| Program                   | What it does                                                                                                |
+| ------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| **Calculator**            | Four-function arithmetic with memory, `sqrt`, sign flip and a working keyboard                              |
+| **MS-DOS Prompt**         | A real shell over your file store: `DIR`, `TYPE`, `DEL`, `VER`, `DATE`, `ECHO`, `CLS`                       |
+| **Notepad**               | Opens and saves `.txt` notes, with a folder browser on Save As                                              |
+| **Paint**                 | Canvas drawing — 20 colours, 4 brush sizes, eraser, plus open and save to your Documents                    |
+| **Minesweeper**           | The actual game: 9×9 with 10 mines, flood reveal, right-click flags, and a first click that is never a mine |
+| **Pipes**                 | Turn pipe pieces until the water reaches every outlet                                                       |
+| **My Computer**           | Drives and folders; C: is your own file store                                                               |
+| **Recycle Bin**           | Honest about being empty — deleted files are gone, not recoverable                                          |
+| **Network Neighbourhood** | The other accounts on this machine; open one and browse their folder                                        |
+| **Winamp**                | Plays the mp3s and mp4s in your Documents, with seeking                                                     |
+| **Control Panel**         | Admins: site settings, per-program switches, storage, and the destructive actions                           |
 
-Minesweeper places its mines *after* your first click, and never under it or its
+Minesweeper places its mines _after_ your first click, and never under it or its
 neighbours, so the first move always opens something — the same trick the original
 used to avoid instant losses.
 
@@ -456,7 +456,7 @@ Admins only, from the Start menu or the desktop. Four tabs:
 - **General** — the site name, a message of the day, the upload limit, **storage per
   account**, and whether new accounts can be created.
 - **Programs** — switch any program on or off. A disabled program disappears from
-  the desktop *and* the Start menu, and the server refuses to launch it, so a stale
+  the desktop _and_ the Start menu, and the server refuses to launch it, so a stale
   shortcut cannot get round it. The Control Panel and User Accounts stay reachable
   whatever you do, or you would lock yourself out.
 - **Storage** — total bytes and files, public links, mail and message counts, and a
@@ -473,7 +473,7 @@ on this server, over a WebSocket.
 
 - **Buddy list** with live online/offline dots and unread badges.
 - **Conversations** in their own windows: history loads on open, new messages appear
-  the moment they are sent, and the other side sees a *typing…* line.
+  the moment they are sent, and the other side sees a _typing…_ line.
 - **Read receipts**, so the sender knows a message was seen.
 - **A notification when someone messages you.** If the conversation window is not
   open — you are in another program, or the buddy list is behind something — a panel
@@ -498,35 +498,35 @@ tab, a dropped connection), so the roster cannot fill up with ghosts.
 
 ### Server
 
-| File | Purpose |
-| --- | --- |
-| `server.js` | HTTP server: static files, the JSON API, streamed uploads, share pages |
-| `lib/auth.js` | scrypt password hashing and session tokens |
+| File           | Purpose                                                                |
+| -------------- | ---------------------------------------------------------------------- |
+| `server.js`    | HTTP server: static files, the JSON API, streamed uploads, share pages |
+| `lib/auth.js`  | scrypt password hashing and session tokens                             |
 | `lib/store.js` | Accounts, sessions, files, shares, mail, messages and settings on disk |
-| `lib/ws.js` | A minimal RFC 6455 WebSocket server, written by hand |
-| `lib/chat.js` | The AIM hub: presence, relay, read receipts |
-| `data/` | Created on first run. Accounts plus one folder per user |
+| `lib/ws.js`    | A minimal RFC 6455 WebSocket server, written by hand                   |
+| `lib/chat.js`  | The AIM hub: presence, relay, read receipts                            |
+| `data/`        | Created on first run. Accounts plus one folder per user                |
 
 ### Front end
 
-| File | Purpose |
-| --- | --- |
-| `card.html` | The whole site: the desktop, its boot sequence, and the shell |
-| `desktop.css` | All the Windows 98 chrome: bevels, windows, taskbar, dialogs |
-| `desktop.js` | Boot sequence, window manager, resizing, session, decoy errors |
-| `apps.js` | Notepad, the file manager, uploads, the image viewer, sign-in, accounts |
-| `mail.js` | Outlook Express: folders, compose, reading, attachments, autocomplete |
-| `letter.js` | Writing, reading, sharing and inviting: the letter system |
-| `find.js` | Find: one search across files, mail and people |
-| `image.js` | Downscaling and re-encoding images in the browser before upload |
-| `sounds.js` | The eight synthesised sounds, and the mute switch |
-| `ascii.js` | The four spinning shapes, including the two 3D renders |
-| `aim.js` | AIM: buddy list and conversations over the WebSocket |
+| File          | Purpose                                                                 |
+| ------------- | ----------------------------------------------------------------------- |
+| `card.html`   | The whole site: the desktop, its boot sequence, and the shell           |
+| `desktop.css` | All the Windows 98 chrome: bevels, windows, taskbar, dialogs            |
+| `desktop.js`  | Boot sequence, window manager, resizing, session, decoy errors          |
+| `apps.js`     | Notepad, the file manager, uploads, the image viewer, sign-in, accounts |
+| `mail.js`     | Outlook Express: folders, compose, reading, attachments, autocomplete   |
+| `letter.js`   | Writing, reading, sharing and inviting: the letter system               |
+| `find.js`     | Find: one search across files, mail and people                          |
+| `image.js`    | Downscaling and re-encoding images in the browser before upload         |
+| `sounds.js`   | The eight synthesised sounds, and the mute switch                       |
+| `ascii.js`    | The four spinning shapes, including the two 3D renders                  |
+| `aim.js`      | AIM: buddy list and conversations over the WebSocket                    |
 | `programs.js` | Calculator, MS-DOS Prompt, Paint, Minesweeper, the file-system browsers |
-| `winamp.js` | The audio and video player |
-| `control.js` | The Control Panel: settings, quotas and the destructive actions |
-| `api.js` | Thin wrapper over the JSON API |
-| `assets/` | Icons, AOL screens, clouds wallpaper, sounds |
+| `winamp.js`   | The audio and video player                                              |
+| `control.js`  | The Control Panel: settings, quotas and the destructive actions         |
+| `api.js`      | Thin wrapper over the JSON API                                          |
+| `assets/`     | Icons, AOL screens, clouds wallpaper, sounds                            |
 
 ## Running it
 
@@ -593,6 +593,10 @@ Then open [http://localhost:8000](http://localhost:8000/).
 - The chat log is `role="log"`, and the calculator screen is `aria-live="polite"`.
 - Resize grips are `aria-hidden`: every window is still usable without a mouse.
 - All user-supplied text is inserted via `textContent`, never `innerHTML`.
+
+## Attribution
+
+Asset's taken from various sources, mostly [98js.](https://98.js.org/) and [win98icons](https://win98icons.alexmeub.com/)
 
 ## License
 
