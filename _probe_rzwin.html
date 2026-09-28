@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>A letter for you</title>
+<meta name="description" content="You've got mail." />
+<meta name="robots" content="noindex" />
+<link rel="stylesheet" href="desktop.css" />
+<link rel="icon" href="assets/aol-desktop-icon.png" />
+</head>
+<body>
+
+<!-- ============================================================
+     The desktop. Everything the recipient interacts with lives in
+     here; the boot and dial-up phases overlay it until they finish.
+     ============================================================ -->
+<div class="w98" id="desktop">
+
+  <!-- ---------- desktop icons ---------- -->
+  <div class="w98-desktop" id="iconLayer">
+    <!-- Icons are injected by desktop.js from a single list, so adding a
+         program is one entry rather than a block of markup. -->
+  </div>
+
+  <!-- ---------- taskbar ---------- -->
+  <div class="w98-taskbar">
+    <button class="w98-start" id="startBtn" type="button" aria-expanded="false" aria-controls="startMenu">
+      <img src="assets/start.png" alt="" />
+      <span>Start</span>
+    </button>
+
+    <div class="w98-tasks" id="taskList"></div>
+
+    <div class="w98-tray" id="tray" title="Connection">
+      <img src="assets/notepad-file-32x32.png" alt="" id="trayMailIcon" hidden />
+      <span class="w98-tray-badge" id="trayMail" hidden></span>
+      <button class="w98-tray-btn" id="traySound" type="button" title="Sound on" aria-pressed="true">
+        <img src="assets/speaker-32x32.png" alt="Sound" />
+      </button>
+      <span id="trayClock">12:00 PM</span>
+    </div>
+  </div>
+
+  <!-- ---------- start menu ---------- -->
+  <div class="w98-startmenu" id="startMenu" hidden role="menu" aria-label="Start menu">
+    <div class="w98-startmenu-side">
+      <span class="w98-startmenu-side-text">Windows<em>98</em></span>
+    </div>
+    <div class="w98-startmenu-items" id="startItems">
+      <!-- injected by desktop.js -->
+    </div>
+  </div>
+
+  <!-- ---------- windows are injected here ---------- -->
+
+  <!-- ============================================================
+       BOOT + DIAL-UP (overlays, removed as the sequence runs)
+       ============================================================ -->
+
+  <div class="w98-bios" id="bios" role="button" tabindex="0" aria-label="Start the computer">
+    <div class="w98-bios-lines" id="biosLines" aria-hidden="true"></div>
+    <div class="w98-bios-prompt" id="biosPrompt" hidden>
+      Press DEL to enter SETUP
+      <span class="w98-bios-cursor"></span>
+    </div>
+  </div>
+
+  <div class="w98-boot" id="boot" hidden>Starting Windows 98...</div>
+
+  <div class="w98-aol" id="aol" hidden>
+    <div class="w98-aol-card w98-raised">
+      <div class="w98-title">
+        <img src="assets/aol-desktop-icon.png" alt="" />
+        <span class="w98-title-text">America Online</span>
+      </div>
+      <div class="w98-aol-body">
+        <div class="w98-aol-main">
+          <div class="w98-aol-fields">
+            <h2 id="aolHeading">Sign On</h2>
+            <p class="aol-sub" id="aolSub">Connecting to the America Online network&hellip;</p>
+
+            <div class="w98-aol-art" id="aolArt" data-phase="connecting"></div>
+
+            <div class="w98-aol-status" id="aolStatus">Initialising modem&hellip;</div>
+
+            <div class="w98-aol-bar w98-sunken"><span id="aolBar"></span></div>
+          </div>
+
+          <!-- the supplied AOL side panel -->
+          <div class="w98-aol-side" aria-hidden="true"></div>
+        </div>
+
+        <div class="w98-aol-actions">
+          <button class="w98-btn" id="aolSkip" type="button">Skip</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="ascii.js"></script>
+<script src="api.js"></script>
+<script src="apps.js"></script>
+<script src="programs.js"></script>
+<script src="control.js"></script>
+<script src="mail.js"></script>
+<script src="letter.js"></script>
+<script src="find.js"></script>
+<script src="image.js"></script>
+<script src="sounds.js"></script>
+<script src="aim.js"></script>
+<script src="winamp.js"></script>
+<script src="desktop.js"></script>
+<script>
+setTimeout(function () {
+  document.getElementById("bios").hidden = true;
+  document.getElementById("boot").hidden = true;
+  document.getElementById("aol").hidden = true;
+  LDPrograms.openCalculator();
+  setTimeout(function () {
+    var win = Array.prototype.filter.call(document.querySelectorAll(".w98-win"),
+      function (w) { return !w.hidden; })[0];
+    var out = {};
+
+    out.grips = win.querySelectorAll(".w98-grip").length;
+    out.dirs = Array.prototype.map.call(win.querySelectorAll(".w98-grip"),
+      function (g) { return g.dataset.dir; });
+
+    var startW = win.offsetWidth, startH = win.offsetHeight;
+    var startL = win.offsetLeft, startT = win.offsetTop;
+    out.start = [startW, startH];
+
+    function drag(dir, dx, dy) {
+      var grip = win.querySelector('.w98-grip[data-dir="' + dir + '"]');
+      var r = grip.getBoundingClientRect();
+      var x = r.left + r.width / 2, y = r.top + r.height / 2;
+      grip.dispatchEvent(new MouseEvent("mousedown", {
+        bubbles: true, cancelable: true, clientX: x, clientY: y
+      }));
+      window.dispatchEvent(new MouseEvent("mousemove", {
+        bubbles: true, clientX: x + dx, clientY: y + dy
+      }));
+      window.dispatchEvent(new MouseEvent("mouseup", { bubbles: true, clientX: x + dx, clientY: y + dy }));
+    }
+
+    // grow from the south-east corner
+    drag("se", 120, 80);
+    out.afterSE = [win.offsetWidth, win.offsetHeight];
+    out.grewW = win.offsetWidth > startW;
+    out.grewH = win.offsetHeight > startH;
+    out.originHeld = win.offsetLeft === startL && win.offsetTop === startT;
+
+    // shrink back from the south-east
+    drag("se", -60, -40);
+    out.afterShrink = [win.offsetWidth, win.offsetHeight];
+
+    // the east edge only changes width
+    var w1 = win.offsetWidth, h1 = win.offsetHeight;
+    drag("e", 40, 0);
+    out.eastOnlyW = win.offsetWidth > w1;
+    out.eastKeptH = win.offsetHeight === h1;
+
+    // dragging the north edge moves the top while the bottom stays put
+    var bottomBefore = win.offsetTop + win.offsetHeight;
+    drag("n", 0, 30);
+    out.northMovedTop = win.offsetTop > startT;
+    out.northHeldBottom = Math.abs((win.offsetTop + win.offsetHeight) - bottomBefore) <= 2;
+
+    // it refuses to go below a usable size
+    drag("se", -4000, -4000);
+    out.minW = win.offsetWidth;
+    out.minH = win.offsetHeight;
+    out.respectsMin = win.offsetWidth >= 200 && win.offsetHeight >= 140;
+
+    // and cannot be dragged off the top-left
+    drag("nw", 5000, 5000);
+    out.afterNW = [win.offsetLeft, win.offsetTop, win.offsetWidth, win.offsetHeight];
+    out.notOffscreen = win.offsetLeft >= 0 && win.offsetTop >= 0;
+
+    // the buttons still work after all that resizing
+    var screen = win.querySelector(".calc-screen");
+    win.querySelector('.calc-btn[data-key="7"]').click();
+    win.querySelector('.calc-btn[data-key="+"]').click();
+    win.querySelector('.calc-btn[data-key="3"]').click();
+    win.querySelector('.calc-btn[data-key="="]').click();
+    out.stillWorks = screen.textContent === "10";
+
+    document.title = "PROBE" + JSON.stringify(out);
+  }, 1200);
+}, 700);
+</script></body>
+</html>

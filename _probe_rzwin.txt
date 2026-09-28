@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PROBE{"grips":8,"dirs":["n","s","e","w","ne","nw","se","sw"],"start":[260,260],"afterSE":[380,340],"grewW":true,"grewH":true,"originHeld":true,"afterShrink":[320,300],"eastOnlyW":true,"eastKeptH":true,"northMovedTop":true,"northHeldBottom":true,"minW":220,"minH":140,"respectsMin":true,"afterNW":[440,230,220,140],"notOffscreen":true,"stillWorks":true}</title>
+<meta name="description" content="You've got mail.">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="desktop.css">
+<link rel="icon" href="assets/aol-desktop-icon.png">
+</head>
+<body style="">
+
+<!-- ============================================================
+     The desktop. Everything the recipient interacts with lives in
+     here; the boot and dial-up phases overlay it until they finish.
+     ============================================================ -->
+<div class="w98" id="desktop">
+
+  <!-- ---------- desktop icons ---------- -->
+  <div class="w98-desktop" id="iconLayer">
+    <!-- Icons are injected by desktop.js from a single list, so adding a
+         program is one entry rather than a block of markup. -->
+  <div class="w98-icon" tabindex="0" data-app-id="documents" role="button" aria-label="My Documents" style="left: 8px; top: 8px;"><img src="assets/my-documents-folder-32x32.png" alt="" draggable="false"><span>My Documents</span></div><div class="w98-icon" tabindex="0" data-app-id="notepad" role="button" aria-label="Notepad" style="left: 8px; top: 84px;"><img src="assets/notepad-32x32.png" alt="" draggable="false"><span>Notepad</span></div><div class="w98-icon" tabindex="0" data-app-id="accounts" role="button" aria-label="User Accounts" style="left: 8px; top: 160px;" hidden=""><img src="assets/network-32x32.png" alt="" draggable="false"><span>User Accounts</span></div><div class="w98-icon" tabindex="0" data-app-id="control" role="button" aria-label="Control Panel" style="left: 8px; top: 236px;" hidden=""><img src="assets/task-scheduler-16x16.png" alt="" draggable="false"><span>Control Panel</span></div><div class="w98-icon" tabindex="0" data-app-id="mycomputer" role="button" aria-label="My Computer" style="left: 8px; top: 312px;"><img src="assets/my-computer-32x32.png" alt="" draggable="false"><span>My Computer</span></div><div class="w98-icon" tabindex="0" data-app-id="network" role="button" aria-label="Network Neighbourhood" style="left: 8px; top: 388px;"><img src="assets/network-32x32.png" alt="" draggable="false"><span>Network Neighbourhood</span></div><div class="w98-icon" tabindex="0" data-app-id="recycle" role="button" aria-label="Recycle Bin" style="left: 8px; top: 464px;"><img src="assets/recycle-bin-32x32.png" alt="" draggable="false"><span>Recycle Bin</span></div><div class="w98-icon" tabindex="0" data-app-id="ie" role="button" aria-label="Internet Explorer" style="left: 8px; top: 540px;"><img src="assets/internet-explorer-32x32.png" alt="" draggable="false"><span>Internet Explorer</span></div><div class="w98-icon" tabindex="0" data-app-id="outlook" role="button" aria-label="Inbox" style="left: 8px; top: 616px;"><img src="assets/notepad-file-32x32.png" alt="" draggable="false"><span>Inbox</span></div><div class="w98-icon" tabindex="0" data-app-id="aim" role="button" aria-label="AIM" style="left: 8px; top: 692px;"><img src="assets/aim.png" alt="" draggable="false"><span>AIM</span></div><div class="w98-icon" tabindex="0" data-app-id="newletter" role="button" aria-label="Write a Letter" style="left: 92px; top: 8px;"><img src="assets/notepad-file-32x32.png" alt="" draggable="false"><span>Write a Letter</span></div><div class="w98-icon" tabindex="0" data-app-id="profile" role="button" aria-label="My Profile" style="left: 92px; top: 84px;"><img src="assets/my-computer-32x32.png" alt="" draggable="false"><span>My Profile</span></div><div class="w98-icon" tabindex="0" data-app-id="find" role="button" aria-label="Find" style="left: 92px; top: 160px;"><img src="assets/internet-explorer-32x32.png" alt="" draggable="false"><span>Find</span></div><div class="w98-icon" tabindex="0" data-app-id="winamp" role="button" aria-label="Winamp" style="left: 92px; top: 236px;"><img src="assets/winamp2-32x32.png" alt="" draggable="false"><span>Winamp</span></div><div class="w98-icon" tabindex="0" data-app-id="minesweeper" role="button" aria-label="Minesweeper" style="left: 92px; top: 312px;"><img src="assets/minesweeper-32x32.png" alt="" draggable="false"><span>Minesweeper</span></div><div class="w98-icon" tabindex="0" data-app-id="solitaire" role="button" aria-label="Solitaire" style="left: 92px; top: 388px;"><img src="assets/solitaire-32x32.png" alt="" draggable="false"><span>Solitaire</span></div><div class="w98-icon" tabindex="0" data-app-id="pinball" role="button" aria-label="3D Pinball" style="left: 92px; top: 464px;"><img src="assets/pinball-32x32.png" alt="" draggable="false"><span>3D Pinball</span></div><div class="w98-icon" tabindex="0" data-app-id="paint" role="button" aria-label="Paint" style="left: 92px; top: 540px;"><img src="assets/paint-32x32.png" alt="" draggable="false"><span>Paint</span></div><div class="w98-icon" tabindex="0" data-app-id="calculator" role="button" aria-label="Calculator" style="left: 92px; top: 616px;"><img src="assets/calculator-32x32.png" alt="" draggable="false"><span>Calculator</span></div><div class="w98-icon" tabindex="0" data-app-id="msdos" role="button" aria-label="MS-DOS Prompt" style="left: 92px; top: 692px;"><img src="assets/msdos-32x32.png" alt="" draggable="false"><span>MS-DOS Prompt</span></div><div class="w98-icon" tabindex="0" data-app-id="pipes" role="button" aria-label="Pipes" style="left: 176px; top: 8px;"><img src="assets/pipes-32x32.png" alt="" draggable="false"><span>Pipes</span></div><div class="w98-icon" tabindex="0" data-app-id="folder" role="button" aria-label="Downloads" style="left: 176px; top: 84px;"><img src="assets/folder-32x32.png" alt="" draggable="false"><span>Downloads</span></div></div>
+
+  <!-- ---------- taskbar ---------- -->
+  <div class="w98-taskbar">
+    <button class="w98-start" id="startBtn" type="button" aria-expanded="false" aria-controls="startMenu">
+      <img src="assets/start.png" alt="">
+      <span>Start</span>
+    </button>
+
+    <div class="w98-tasks" id="taskList"><button type="button" class="w98-task is-active"><img src="assets/calculator-32x32.png" alt=""><span>Calculator</span></button></div>
+
+    <div class="w98-tray" id="tray" title="Connection">
+      <img src="assets/notepad-file-32x32.png" alt="" id="trayMailIcon" hidden="">
+      <span class="w98-tray-badge" id="trayMail" hidden=""></span>
+      <button class="w98-tray-btn" id="traySound" type="button" title="Sound on — click to mute" aria-pressed="true">
+        <img src="assets/speaker-32x32.png" alt="Sound">
+      </button>
+      <span id="trayClock" title="Not signed in">11:09 PM</span>
+    </div>
+  </div>
+
+  <!-- ---------- start menu ---------- -->
+  <div class="w98-startmenu" id="startMenu" hidden="" role="menu" aria-label="Start menu">
+    <div class="w98-startmenu-side">
+      <span class="w98-startmenu-side-text">Windows<em>98</em></span>
+    </div>
+    <div class="w98-startmenu-items" id="startItems">
+      <!-- injected by desktop.js -->
+    <button type="button" class="w98-startitem" role="menuitem"><img src="assets/notepad-file-32x32.png" alt=""><span>Inbox</span></button><div class="w98-startsep"></div><button type="button" class="w98-startitem" role="menuitem"><img src="assets/notepad-file-32x32.png" alt=""><span>Write a Letter</span></button><button type="button" class="w98-startitem" role="menuitem"><img src="assets/notepad-32x32.png" alt=""><span>Notepad</span></button><button type="button" class="w98-startitem" role="menuitem"><img src="assets/my-documents-folder-32x32.png" alt=""><span>My Documents</span></button><button type="button" class="w98-startitem" role="menuitem" data-admin-only="1" hidden=""><img src="assets/network-32x32.png" alt=""><span>User Accounts</span></button><button type="button" class="w98-startitem" role="menuitem" data-admin-only="1" hidden=""><img src="assets/network-32x32.png" alt=""><span>Invitations</span></button><div class="w98-startsep"></div><button type="button" class="w98-startitem" role="menuitem"><img src="assets/my-computer-32x32.png" alt=""><span>My Profile</span></button><button type="button" class="w98-startitem" role="menuitem"><img src="assets/internet-explorer-32x32.png" alt=""><span>Find...</span></button><button type="button" class="w98-startitem" role="menuitem"><img src="assets/calculator-32x32.png" alt=""><span>Calculator</span></button><button type="button" class="w98-startitem" role="menuitem"><img src="assets/paint-32x32.png" alt=""><span>Paint</span></button><button type="button" class="w98-startitem" role="menuitem"><img src="assets/minesweeper-32x32.png" alt=""><span>Minesweeper</span></button><button type="button" class="w98-startitem" role="menuitem"><img src="assets/pipes-32x32.png" alt=""><span>Pipes</span></button><button type="button" class="w98-startitem" role="menuitem"><img src="assets/msdos-32x32.png" alt=""><span>MS-DOS Prompt</span></button><button type="button" class="w98-startitem" role="menuitem"><img src="assets/winamp2-32x32.png" alt=""><span>Winamp</span></button><button type="button" class="w98-startitem" role="menuitem"><img src="assets/my-computer-32x32.png" alt=""><span>My Computer</span></button><button type="button" class="w98-startitem" role="menuitem" data-admin-only="1" hidden=""><img src="assets/task-scheduler-16x16.png" alt=""><span>Control Panel</span></button><div class="w98-startsep"></div><button type="button" class="w98-startitem" role="menuitem"><img src="assets/my-computer-32x32.png" alt=""><span>Sign In...</span></button><button type="button" class="w98-startitem" role="menuitem"><img src="assets/folder-32x32.png" alt=""><span>Programs</span></button><button type="button" class="w98-startitem" role="menuitem"><img src="assets/task-scheduler-16x16.png" alt=""><span>Settings</span></button><button type="button" class="w98-startitem" role="menuitem"><img src="assets/network-32x32.png" alt=""><span>Find</span></button><button type="button" class="w98-startitem" role="menuitem"><img src="assets/audio-okay-16x16.png" alt=""><span>Help</span></button><button type="button" class="w98-startitem" role="menuitem"><img src="assets/msdos-32x32.png" alt=""><span>Run...</span></button><div class="w98-startsep"></div><button type="button" class="w98-startitem" role="menuitem"><img src="assets/recycle-bin-32x32.png" alt=""><span>Shut Down...</span></button></div>
+  </div>
+
+  <!-- ---------- windows are injected here ---------- -->
+
+  <!-- ============================================================
+       BOOT + DIAL-UP (overlays, removed as the sequence runs)
+       ============================================================ -->
+
+  <div class="w98-bios" id="bios" role="button" tabindex="0" aria-label="Start the computer" hidden="">
+    <div class="w98-bios-lines" id="biosLines" aria-hidden="true"><div>Award Modular BIOS v4.51PG, An Energy Star Ally</div><div>Copyright (C) 1984-98, Award Software, Inc.</div><div>&nbsp;</div><div>Letterdrop 440BX/ZX AGPset</div><div>Main Processor : Pentium II 350MHz</div><div>Memory Test    : 65536K OK</div><div>&nbsp;</div><div>Detecting IDE Primary Master  ... QUANTUM FIREBALL</div><div>Detecting IDE Primary Slave   ... None</div><div>Detecting IDE Secondary Master... CD-ROM 40X</div><div>Detecting IDE Secondary Slave ... None</div><div>&nbsp;</div><div>09/23/2000-i440BX-2A69KA1BC-00</div></div>
+    <div class="w98-bios-prompt" id="biosPrompt">
+      Press DEL to enter SETUP
+      <span class="w98-bios-cursor"></span>
+    </div>
+  </div>
+
+  <div class="w98-boot" id="boot" hidden="">Starting Windows 98...</div>
+
+  <div class="w98-aol" id="aol" hidden="">
+    <div class="w98-aol-card w98-raised">
+      <div class="w98-title">
+        <img src="assets/aol-desktop-icon.png" alt="">
+        <span class="w98-title-text">America Online</span>
+      </div>
+      <div class="w98-aol-body">
+        <div class="w98-aol-main">
+          <div class="w98-aol-fields">
+            <h2 id="aolHeading">Sign On</h2>
+            <p class="aol-sub" id="aolSub">Connecting to the America Online network…</p>
+
+            <div class="w98-aol-art" id="aolArt" data-phase="connecting"></div>
+
+            <div class="w98-aol-status" id="aolStatus">Initialising modem…</div>
+
+            <div class="w98-aol-bar w98-sunken"><span id="aolBar"></span></div>
+          </div>
+
+          <!-- the supplied AOL side panel -->
+          <div class="w98-aol-side" aria-hidden="true"></div>
+        </div>
+
+        <div class="w98-aol-actions">
+          <button class="w98-btn" id="aolSkip" type="button">Skip</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="w98-win w98-raised" data-title="Calculator" data-icon="assets/calculator-32x32.png" style="left: 440px; top: 230px; width: 200px; height: 140px; z-index: 101;" data-min-w="200" data-min-h="140" tabindex="-1"><div class="w98-title"><img src="assets/calculator-32x32.png" alt=""><span class="w98-title-text">Calculator</span><div class="w98-title-btns"><button type="button" class="w98-tbtn min" aria-label="Minimise"></button><button type="button" class="w98-tbtn max" aria-label="Maximise"></button><button type="button" class="w98-tbtn close" aria-label="Close"></button></div></div><div class="w98-body"><div class="calc-screen" role="status" aria-live="polite">10</div><div class="calc-grid"><button class="calc-btn" type="button" data-key="MC">MC</button><button class="calc-btn" type="button" data-key="MR">MR</button><button class="calc-btn" type="button" data-key="MS">MS</button><button class="calc-btn" type="button" data-key="C">C</button><button class="calc-btn" type="button" data-key="7">7</button><button class="calc-btn" type="button" data-key="8">8</button><button class="calc-btn" type="button" data-key="9">9</button><button class="calc-btn" type="button" data-key="/">/</button><button class="calc-btn" type="button" data-key="4">4</button><button class="calc-btn" type="button" data-key="5">5</button><button class="calc-btn" type="button" data-key="6">6</button><button class="calc-btn" type="button" data-key="*">*</button><button class="calc-btn" type="button" data-key="1">1</button><button class="calc-btn" type="button" data-key="2">2</button><button class="calc-btn" type="button" data-key="3">3</button><button class="calc-btn" type="button" data-key="-">-</button><button class="calc-btn" type="button" data-key="0">0</button><button class="calc-btn" type="button" data-key="+/-">+/-</button><button class="calc-btn" type="button" data-key=".">.</button><button class="calc-btn" type="button" data-key="+">+</button><button class="calc-btn" type="button" data-key="Back">Back</button><button class="calc-btn" type="button" data-key="=">=</button><button class="calc-btn" type="button" data-key="CE">CE</button><button class="calc-btn" type="button" data-key="sqrt">sqrt</button></div></div><div class="w98-grip w98-grip-n" data-dir="n" aria-hidden="true"></div><div class="w98-grip w98-grip-s" data-dir="s" aria-hidden="true"></div><div class="w98-grip w98-grip-e" data-dir="e" aria-hidden="true"></div><div class="w98-grip w98-grip-w" data-dir="w" aria-hidden="true"></div><div class="w98-grip w98-grip-ne" data-dir="ne" aria-hidden="true"></div><div class="w98-grip w98-grip-nw" data-dir="nw" aria-hidden="true"></div><div class="w98-grip w98-grip-se" data-dir="se" aria-hidden="true"></div><div class="w98-grip w98-grip-sw" data-dir="sw" aria-hidden="true"></div></div></div>
+
+<script src="ascii.js"></script>
+<script src="api.js"></script>
+<script src="apps.js"></script>
+<script src="programs.js"></script>
+<script src="control.js"></script>
+<script src="mail.js"></script>
+<script src="letter.js"></script>
+<script src="find.js"></script>
+<script src="image.js"></script>
+<script src="sounds.js"></script>
+<script src="aim.js"></script>
+<script src="winamp.js"></script>
+<script src="desktop.js"></script>
+<script>
+setTimeout(function () {
+  document.getElementById("bios").hidden = true;
+  document.getElementById("boot").hidden = true;
+  document.getElementById("aol").hidden = true;
+  LDPrograms.openCalculator();
+  setTimeout(function () {
+    var win = Array.prototype.filter.call(document.querySelectorAll(".w98-win"),
+      function (w) { return !w.hidden; })[0];
+    var out = {};
+
+    out.grips = win.querySelectorAll(".w98-grip").length;
+    out.dirs = Array.prototype.map.call(win.querySelectorAll(".w98-grip"),
+      function (g) { return g.dataset.dir; });
+
+    var startW = win.offsetWidth, startH = win.offsetHeight;
+    var startL = win.offsetLeft, startT = win.offsetTop;
+    out.start = [startW, startH];
+
+    function drag(dir, dx, dy) {
+      var grip = win.querySelector('.w98-grip[data-dir="' + dir + '"]');
+      var r = grip.getBoundingClientRect();
+      var x = r.left + r.width / 2, y = r.top + r.height / 2;
+      grip.dispatchEvent(new MouseEvent("mousedown", {
+        bubbles: true, cancelable: true, clientX: x, clientY: y
+      }));
+      window.dispatchEvent(new MouseEvent("mousemove", {
+        bubbles: true, clientX: x + dx, clientY: y + dy
+      }));
+      window.dispatchEvent(new MouseEvent("mouseup", { bubbles: true, clientX: x + dx, clientY: y + dy }));
+    }
+
+    // grow from the south-east corner
+    drag("se", 120, 80);
+    out.afterSE = [win.offsetWidth, win.offsetHeight];
+    out.grewW = win.offsetWidth > startW;
+    out.grewH = win.offsetHeight > startH;
+    out.originHeld = win.offsetLeft === startL && win.offsetTop === startT;
+
+    // shrink back from the south-east
+    drag("se", -60, -40);
+    out.afterShrink = [win.offsetWidth, win.offsetHeight];
+
+    // the east edge only changes width
+    var w1 = win.offsetWidth, h1 = win.offsetHeight;
+    drag("e", 40, 0);
+    out.eastOnlyW = win.offsetWidth > w1;
+    out.eastKeptH = win.offsetHeight === h1;
+
+    // dragging the north edge moves the top while the bottom stays put
+    var bottomBefore = win.offsetTop + win.offsetHeight;
+    drag("n", 0, 30);
+    out.northMovedTop = win.offsetTop > startT;
+    out.northHeldBottom = Math.abs((win.offsetTop + win.offsetHeight) - bottomBefore) <= 2;
+
+    // it refuses to go below a usable size
+    drag("se", -4000, -4000);
+    out.minW = win.offsetWidth;
+    out.minH = win.offsetHeight;
+    out.respectsMin = win.offsetWidth >= 200 && win.offsetHeight >= 140;
+
+    // and cannot be dragged off the top-left
+    drag("nw", 5000, 5000);
+    out.afterNW = [win.offsetLeft, win.offsetTop, win.offsetWidth, win.offsetHeight];
+    out.notOffscreen = win.offsetLeft >= 0 && win.offsetTop >= 0;
+
+    // the buttons still work after all that resizing
+    var screen = win.querySelector(".calc-screen");
+    win.querySelector('.calc-btn[data-key="7"]').click();
+    win.querySelector('.calc-btn[data-key="+"]').click();
+    win.querySelector('.calc-btn[data-key="3"]').click();
+    win.querySelector('.calc-btn[data-key="="]').click();
+    out.stillWorks = screen.textContent === "10";
+
+    document.title = "PROBE" + JSON.stringify(out);
+  }, 1200);
+}, 700);
+</script>
+
+</body></html>

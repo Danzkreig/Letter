@@ -1,0 +1,2 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Not found</title></head><body style="font-family:system-ui;padding:40px;background:#14100e;color:#e8e2da"><h1 style="font-size:18px">This link is not available</h1><p style="color:#9a9088">The file was removed, or the link was revoked.</p></body></html>

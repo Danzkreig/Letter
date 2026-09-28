@@ -1,0 +1,10 @@
+const fs = require("fs");
+const d = fs.readFileSync("C:\\Users\\user\\Downloads\\Letter\\_probe_dbg_dump.txt", "utf8");
+console.log("dump length:", d.length);
+console.log("has <script src=:", /<script src=/.test(d));
+const i = d.indexOf("<body");
+console.log("body head:", JSON.stringify(d.slice(i, i + 400)));
+const j = d.indexOf("iconLayer");
+console.log("iconLayer at:", j);
+if (j > -1) console.log("around iconLayer:", JSON.stringify(d.slice(j - 60, j + 200)));
+console.log("first 200 chars of dump:", JSON.stringify(d.slice(0, 200)));

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PROBE{"allowed":false,"message":"Admins only.","status":403}</title>
+<meta name="description" content="You've got mail.">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="desktop.css">
+<link rel="icon" href="assets/aol-desktop-icon.png">
+</head>
+<body>
+
+<!-- ============================================================
+     The desktop. Everything the recipient interacts with lives in
+     here; the boot and dial-up phases overlay it until they finish.
+     ============================================================ -->
+<div class="w98" id="desktop">
+
+  <!-- ---------- desktop icons ---------- -->
+  <div class="w98-desktop" id="iconLayer">
+    <!-- Icons are injected by desktop.js from a single list, so adding a
+         program is one entry rather than a block of markup. -->
+  <div class="w98-icon" tabindex="0" data-app-id="documents" role="button" aria-label="My Documents" style="left: 8px; top: 8px;"><img src="assets/my-documents-folder-32x32.png" alt="" draggable="false"><span>My Documents</span></div><div class="w98-icon" tabindex="0" data-app-id="notepad" role="button" aria-label="Notepad" style="left: 8px; top: 84px;"><img src="assets/notepad-32x32.png" alt="" draggable="false"><span>Notepad</span></div><div class="w98-icon" tabindex="0" data-app-id="accounts" role="button" aria-label="User Accounts" style="left: 8px; top: 160px;" hidden=""><img src="assets/network-32x32.png" alt="" draggable="false"><span>User Accounts</span></div><div class="w98-icon" tabindex="0" data-app-id="control" role="button" aria-label="Control Panel" style="left: 8px; top: 236px;" hidden=""><img src="assets/task-scheduler-16x16.png" alt="" draggable="false"><span>Control Panel</span></div><div class="w98-icon" tabindex="0" data-app-id="mycomputer" role="button" aria-label="My Computer" style="left: 8px; top: 312px;"><img src="assets/my-computer-32x32.png" alt="" draggable="false"><span>My Computer</span></div><div class="w98-icon" tabindex="0" data-app-id="network" role="button" aria-label="Network Neighbourhood" style="left: 8px; top: 388px;"><img src="assets/network-32x32.png" alt="" draggable="false"><span>Network Neighbourhood</span></div><div class="w98-icon" tabindex="0" data-app-id="recycle" role="button" aria-label="Recycle Bin" style="left: 8px; top: 464px;"><img src="assets/recycle-bin-32x32.png" alt="" draggable="false"><span>Recycle Bin</span></div><div class="w98-icon" tabindex="0" data-app-id="ie" role="button" aria-label="Internet Explorer" style="left: 8px; top: 540px;"><img src="assets/internet-explorer-32x32.png" alt="" draggable="false"><span>Internet Explorer</span></div><div class="w98-icon" tabindex="0" data-app-id="outlook" role="button" aria-label="Inbox" style="left: 8px; top: 616px;"><img src="assets/notepad-file-32x32.png" alt="" draggable="false"><span>Inbox</span></div><div class="w98-icon" tabindex="0" data-app-id="aim" role="button" aria-label="AIM" style="left: 92px; top: 8px;"><img src="assets/aim.png" alt="" draggable="false"><span>AIM</span></div><div class="w98-icon" tabindex="0" data-app-id="newletter" role="button" aria-label="Write a Letter" style="left: 92px; top: 84px;"><img src="assets/notepad-file-32x32.png" alt="" draggable="false"><span>Write a Letter</span></div><div class="w98-icon" tabindex="0" data-app-id="profile" role="button" aria-label="My Profile" style="left: 92px; top: 160px;"><img src="assets/my-computer-32x32.png" alt="" draggable="false"><span>My Profile</span></div><div class="w98-icon" tabindex="0" data-app-id="find" role="button" aria-label="Find" style="left: 92px; top: 236px;"><img src="assets/internet-explorer-32x32.png" alt="" draggable="false"><span>Find</span></div><div class="w98-icon" tabindex="0" data-app-id="winamp" role="button" aria-label="Winamp" style="left: 92px; top: 312px;"><img src="assets/winamp2-32x32.png" alt="" draggable="false"><span>Winamp</span></div><div class="w98-icon" tabindex="0" data-app-id="minesweeper" role="button" aria-label="Minesweeper" style="left: 92px; top: 388px;"><img src="assets/minesweeper-32x32.png" alt="" draggable="false"><span>Minesweeper</span></div><div class="w98-icon" tabindex="0" data-app-id="solitaire" role="button" aria-label="Solitaire" style="left: 92px; top: 464px;"><img src="assets/solitaire-32x32.png" alt="" draggable="false"><span>Solitaire</span></div><div class="w98-icon" tabindex="0" data-app-id="pinball" role="button" aria-label="3D Pinball" style="left: 92px; top: 540px;"><img src="assets/pinball-32x32.png" alt="" draggable="false"><span>3D Pinball</span></div><div class="w98-icon" tabindex="0" data-app-id="paint" role="button" aria-label="Paint" style="left: 92px; top: 616px;"><img src="assets/paint-32x32.png" alt="" draggable="false"><span>Paint</span></div><div class="w98-icon" tabindex="0" data-app-id="calculator" role="button" aria-label="Calculator" style="left: 176px; top: 8px;"><img src="assets/calculator-32x32.png" alt="" draggable="false"><span>Calculator</span></div><div class="w98-icon" tabindex="0" data-app-id="msdos" role="button" aria-label="MS-DOS Prompt" style="left: 176px; top: 84px;"><img src="assets/msdos-32x32.png" alt="" draggable="false"><span>MS-DOS Prompt</span></div><div class="w98-icon" tabindex="0" data-app-id="pipes" role="button" aria-label="Pipes" style="left: 176px; top: 160px;"><img src="assets/pipes-32x32.png" alt="" draggable="false"><span>Pipes</span></div><div class="w98-icon" tabindex="0" data-app-id="folder" role="button" aria-label="Downloads" style="left: 176px; top: 236px;"><img src="assets/folder-32x32.png" alt="" draggable="false"><span>Downloads</span></div></div>
+
+  <!-- ---------- taskbar ---------- -->
+  <div class="w98-taskbar">
+    <button class="w98-start" id="startBtn" type="button" aria-expanded="false" aria-controls="startMenu">
+      <img src="assets/start.png" alt="">
+      <span>Start</span>
+    </button>
+
+    <div class="w98-tasks" id="taskList"><button type="button" class="w98-task is-active"><img src="assets/network-32x32.png" alt=""><span>Log On to Letterdrop</span></button></div>
+
+    <div class="w98-tray" id="tray" title="Connection">
+      <img src="assets/notepad-file-32x32.png" alt="" id="trayMailIcon" hidden="">
+      <span class="w98-tray-badge" id="trayMail" hidden="" title="0 unread messages">0</span>
+      <button class="w98-tray-btn" id="traySound" type="button" title="Sound on — click to mute" aria-pressed="true">
+        <img src="assets/speaker-32x32.png" alt="Sound">
+      </button>
+      <span id="trayClock" title="Signed in as alice">11:08 PM</span>
+    </div>
+  </div>
+
+  <!-- ---------- start menu ---------- -->
+  <div class="w98-startmenu" id="startMenu" hidden="" role="menu" aria-label="Start menu">
+    <div class="w98-startmenu-side">
+      <span class="w98-startmenu-side-text">Windows<em>98</em></span>
+    </div>
+    <div class="w98-startmenu-items" id="startItems">
+      <!-- injected by desktop.js -->
+    <button type="button" class="w98-startitem" role="menuitem"><img src="assets/notepad-file-32x32.png" alt=""><span>Inbox</span></button><div class="w98-startsep"></div><button type="button" class="w98-startitem" role="menuitem"><img src="assets/notepad-file-32x32.png" alt=""><span>Write a Letter</span></button><button type="button" class="w98-startitem" role="menuitem"><img src="assets/notepad-32x32.png" alt=""><span>Notepad</span></button><button type="button" class="w98-startitem" role="menuitem"><img src="assets/my-documents-folder-32x32.png" alt=""><span>My Documents</span></button><button type="button" class="w98-startitem" role="menuitem" data-admin-only="1" hidden=""><img src="assets/network-32x32.png" alt=""><span>User Accounts</span></button><button type="button" class="w98-startitem" role="menuitem" data-admin-only="1" hidden=""><img src="assets/network-32x32.png" alt=""><span>Invitations</span></button><div class="w98-startsep"></div><button type="button" class="w98-startitem" role="menuitem"><img src="assets/my-computer-32x32.png" alt=""><span>My Profile</span></button><button type="button" class="w98-startitem" role="menuitem"><img src="assets/internet-explorer-32x32.png" alt=""><span>Find...</span></button><button type="button" class="w98-startitem" role="menuitem"><img src="assets/calculator-32x32.png" alt=""><span>Calculator</span></button><button type="button" class="w98-startitem" role="menuitem"><img src="assets/paint-32x32.png" alt=""><span>Paint</span></button><button type="button" class="w98-startitem" role="menuitem"><img src="assets/minesweeper-32x32.png" alt=""><span>Minesweeper</span></button><button type="button" class="w98-startitem" role="menuitem"><img src="assets/pipes-32x32.png" alt=""><span>Pipes</span></button><button type="button" class="w98-startitem" role="menuitem"><img src="assets/msdos-32x32.png" alt=""><span>MS-DOS Prompt</span></button><button type="button" class="w98-startitem" role="menuitem"><img src="assets/winamp2-32x32.png" alt=""><span>Winamp</span></button><button type="button" class="w98-startitem" role="menuitem"><img src="assets/my-computer-32x32.png" alt=""><span>My Computer</span></button><button type="button" class="w98-startitem" role="menuitem" data-admin-only="1" hidden=""><img src="assets/task-scheduler-16x16.png" alt=""><span>Control Panel</span></button><div class="w98-startsep"></div><button type="button" class="w98-startitem" role="menuitem"><img src="assets/my-computer-32x32.png" alt=""><span>Sign In...</span></button><button type="button" class="w98-startitem" role="menuitem"><img src="assets/folder-32x32.png" alt=""><span>Programs</span></button><button type="button" class="w98-startitem" role="menuitem"><img src="assets/task-scheduler-16x16.png" alt=""><span>Settings</span></button><button type="button" class="w98-startitem" role="menuitem"><img src="assets/network-32x32.png" alt=""><span>Find</span></button><button type="button" class="w98-startitem" role="menuitem"><img src="assets/audio-okay-16x16.png" alt=""><span>Help</span></button><button type="button" class="w98-startitem" role="menuitem"><img src="assets/msdos-32x32.png" alt=""><span>Run...</span></button><div class="w98-startsep"></div><button type="button" class="w98-startitem" role="menuitem"><img src="assets/recycle-bin-32x32.png" alt=""><span>Shut Down...</span></button></div>
+  </div>
+
+  <!-- ---------- windows are injected here ---------- -->
+
+  <!-- ============================================================
+       BOOT + DIAL-UP (overlays, removed as the sequence runs)
+       ============================================================ -->
+
+  <div class="w98-bios" id="bios" role="button" tabindex="0" aria-label="Start the computer" hidden="">
+    <div class="w98-bios-lines" id="biosLines" aria-hidden="true"><div>Award Modular BIOS v4.51PG, An Energy Star Ally</div><div>Copyright (C) 1984-98, Award Software, Inc.</div><div>&nbsp;</div><div>Letterdrop 440BX/ZX AGPset</div><div>Main Processor : Pentium II 350MHz</div><div>Memory Test    : 65536K OK</div><div>&nbsp;</div><div>Detecting IDE Primary Master  ... QUANTUM FIREBALL</div><div>Detecting IDE Primary Slave   ... None</div><div>Detecting IDE Secondary Master... CD-ROM 40X</div><div>Detecting IDE Secondary Slave ... None</div><div>&nbsp;</div><div>09/23/2000-i440BX-2A69KA1BC-00</div></div>
+    <div class="w98-bios-prompt" id="biosPrompt">
+      Press DEL to enter SETUP
+      <span class="w98-bios-cursor"></span>
+    </div>
+  </div>
+
+  <div class="w98-boot" id="boot" hidden="">Starting Windows 98...</div>
+
+  <div class="w98-aol" id="aol" hidden="">
+    <div class="w98-aol-card w98-raised">
+      <div class="w98-title">
+        <img src="assets/aol-desktop-icon.png" alt="">
+        <span class="w98-title-text">America Online</span>
+      </div>
+      <div class="w98-aol-body">
+        <div class="w98-aol-main">
+          <div class="w98-aol-fields">
+            <h2 id="aolHeading">Sign On</h2>
+            <p class="aol-sub" id="aolSub">Connecting to the America Online network…</p>
+
+            <div class="w98-aol-art" id="aolArt" data-phase="connecting"></div>
+
+            <div class="w98-aol-status" id="aolStatus">Initialising modem…</div>
+
+            <div class="w98-aol-bar w98-sunken"><span id="aolBar"></span></div>
+          </div>
+
+          <!-- the supplied AOL side panel -->
+          <div class="w98-aol-side" aria-hidden="true"></div>
+        </div>
+
+        <div class="w98-aol-actions">
+          <button class="w98-btn" id="aolSkip" type="button">Skip</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="w98-win w98-raised w98-signin-win" data-title="Log On to Letterdrop" data-icon="assets/network-32x32.png" style="left: 200px; top: 120px; width: 380px; height: 260px; z-index: 101;" data-min-w="200" data-min-h="140" hidden=""><div class="w98-title"><img src="assets/network-32x32.png" alt=""><span class="w98-title-text">Log On to Letterdrop</span><div class="w98-title-btns"><button type="button" class="w98-tbtn min" aria-label="Minimise"></button><button type="button" class="w98-tbtn max" aria-label="Maximise"></button><button type="button" class="w98-tbtn close" aria-label="Close"></button></div></div><div class="w98-body"><div class="w98-signin"><div class="w98-signin-banner"><div class="w98-signin-title">Letterdrop Network</div><div class="w98-signin-sub">Enter your user name and password.</div></div><div class="w98-signin-row"><label>User name:</label><input class="w98-field" type="text" autocomplete="username" spellcheck="false"></div><div class="w98-signin-row"><label>Password:</label><input class="w98-field" type="password" autocomplete="current-password"></div><div class="w98-signin-msg">Connecting...</div><div class="w98-signin-actions"><button class="w98-btn" type="button">OK</button><button class="w98-btn" type="button">Cancel</button></div></div></div><div class="w98-grip w98-grip-n" data-dir="n" aria-hidden="true"></div><div class="w98-grip w98-grip-s" data-dir="s" aria-hidden="true"></div><div class="w98-grip w98-grip-e" data-dir="e" aria-hidden="true"></div><div class="w98-grip w98-grip-w" data-dir="w" aria-hidden="true"></div><div class="w98-grip w98-grip-ne" data-dir="ne" aria-hidden="true"></div><div class="w98-grip w98-grip-nw" data-dir="nw" aria-hidden="true"></div><div class="w98-grip w98-grip-se" data-dir="se" aria-hidden="true"></div><div class="w98-grip w98-grip-sw" data-dir="sw" aria-hidden="true"></div></div><div class="w98-dialog w98-raised" role="alertdialog" style="width: 380px; left: 402px; top: 230.4px;"><div class="w98-title"><span class="w98-title-text">Log On</span><div class="w98-title-btns"><button type="button" class="w98-tbtn close" aria-label="Close"></button></div></div><div class="w98-dialog-body"><img class="w98-dialog-icon" src="assets/recycle-bin-32x32.png" alt=""><div class="w98-dialog-msg">Signed in as alice (user).</div></div><div class="w98-dialog-actions"><button type="button" class="w98-btn">OK</button></div></div></div>
+
+<script src="ascii.js"></script>
+<script src="api.js"></script>
+<script src="apps.js"></script>
+<script src="programs.js"></script>
+<script src="control.js"></script>
+<script src="mail.js"></script>
+<script src="letter.js"></script>
+<script src="find.js"></script>
+<script src="image.js"></script>
+<script src="sounds.js"></script>
+<script src="aim.js"></script>
+<script src="winamp.js"></script>
+<script src="desktop.js"></script>
+<script>
+
+function ready() {
+  document.getElementById("bios").hidden = true;
+  document.getElementById("boot").hidden = true;
+  document.getElementById("aol").hidden = true;
+}
+function signInAs(u, p) {
+  // the real form: open it, fill it, submit it
+  return new Promise(function (resolve, reject) {
+    LDApps.openSignIn(function (user) { resolve(user || null); });
+    setTimeout(function () {
+      var inputs = document.querySelectorAll(".w98-signin input");
+      if (inputs.length < 2) { reject(new Error("no sign-in form")); return; }
+      inputs[0].value = u;
+      inputs[1].value = p;
+      var ok = document.querySelector(".w98-signin-actions .w98-btn");
+      ok.click();
+      setTimeout(function () { resolve(null); }, 2500);
+    }, 300);
+  });
+}
+
+setTimeout(function () {
+  ready();
+  signInAs("alice", "alicepassword").then(function () {
+    return LD.listUsers().then(function () {
+      document.title = "PROBE" + JSON.stringify({ allowed: true });
+    }).catch(function (e) {
+      document.title = "PROBE" + JSON.stringify({ allowed: false, message: e.message, status: e.status });
+    });
+  });
+}, 600);
+</script>
+
+</body></html>

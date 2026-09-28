@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>readme.txt</title>
+<meta name="description" content="readme.txt">
+<meta property="og:type" content="article">
+<meta property="og:title" content="readme.txt">
+<meta property="og:description" content="readme.txt">
+<meta property="og:url" content="http://127.0.0.1:8762/s/7nx7ax">
+<meta property="og:site_name" content="Letterdrop">
+<meta name="twitter:card" content="summary">
+<style>
+  html,body { margin:0; height:100%; background:#14100e; }
+  body { display:grid; place-items:center; padding:16px; box-sizing:border-box; }
+  .media { max-width:100%; max-height:100vh; display:block; }
+  .audio { width:min(560px, 100%); }
+  pre { background:#fffdf6; color:#2a2621; padding:22px; border-radius:10px; max-width:900px;
+        white-space:pre-wrap; word-break:break-word; line-height:1.6;
+        font-family:ui-monospace,Menlo,Consolas,monospace; font-size:13.5px; }
+  .dl { color:#e8e2da; background:#2a2521; border:1px solid #3a332d; border-radius:8px;
+        padding:12px 18px; text-decoration:none; font-family:system-ui,sans-serif; font-size:14px; }
+</style>
+</head>
+<body>
+<pre>Line one of the note.
+
+Line two.</pre>
+
+
+</body></html>

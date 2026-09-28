@@ -1,0 +1,53 @@
+{
+  "users": [
+    {
+      "id": "u_f78c3313f8e9af2e",
+      "username": "root",
+      "role": "admin",
+      "hash": "scrypt$32768$8$1$oKzdQMm5Dp1GB6qhlchPWg==$pHHUZjofCgcnWWsNn7WmbTF5FHZcguDoo9HxbSgAN4+GyyqraMM7vojMMp9Nmy6NkgYniZdjGH3SvMb29J4OGw==",
+      "created": "2026-09-25T15:09:25.285Z"
+    }
+  ],
+  "sessions": {
+    "UN85DaxBz4bhfeenIrTLZ5KEjAruSSKKbyPP_QqOzEs": {
+      "userId": "u_f78c3313f8e9af2e",
+      "created": 1790348965557,
+      "expires": 1790392165557,
+      "agent": "",
+      "ip": "127.0.0.1"
+    },
+    "OpE4MlIwZiM9TwBznQ9DLJnEEi0bVqRRILXZNizu9QY": {
+      "userId": "u_f78c3313f8e9af2e",
+      "created": 1790348970505,
+      "expires": 1790392170505,
+      "agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36 Edg/153.0.0.0",
+      "ip": "127.0.0.1"
+    }
+  },
+  "shares": {},
+  "mail": [],
+  "ims": [],
+  "settings": {
+    "siteName": "Letterdrop",
+    "motd": "Welcome to Letterdrop.",
+    "allowSignups": true,
+    "maxUploadMB": 1024,
+    "quotaMB": 0,
+    "lockOverQuota": false,
+    "programs": {
+      "notepad": true,
+      "documents": true,
+      "paint": false,
+      "calculator": true,
+      "minesweeper": false,
+      "msdos": true,
+      "mycomputer": true,
+      "network": true,
+      "aim": true,
+      "mail": true,
+      "letterdrop": true,
+      "winamp": true,
+      "accounts": true
+    }
+  }
+}

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>A letter for you</title>
+<meta name="description" content="You've got mail." />
+<meta name="robots" content="noindex" />
+<link rel="stylesheet" href="desktop.css" />
+<link rel="icon" href="assets/aol-desktop-icon.png" />
+</head>
+<body>
+
+<!-- ============================================================
+     The desktop. Everything the recipient interacts with lives in
+     here; the boot and dial-up phases overlay it until they finish.
+     ============================================================ -->
+<div class="w98" id="desktop">
+
+  <!-- ---------- desktop icons ---------- -->
+  <div class="w98-desktop" id="iconLayer">
+    <!-- Icons are injected by desktop.js from a single list, so adding a
+         program is one entry rather than a block of markup. -->
+  </div>
+
+  <!-- ---------- taskbar ---------- -->
+  <div class="w98-taskbar">
+    <button class="w98-start" id="startBtn" type="button" aria-expanded="false" aria-controls="startMenu">
+      <img src="assets/start.png" alt="" />
+      <span>Start</span>
+    </button>
+
+    <div class="w98-tasks" id="taskList"></div>
+
+    <div class="w98-tray" id="tray" title="Connection">
+      <img src="assets/notepad-file-32x32.png" alt="" id="trayMailIcon" hidden />
+      <span class="w98-tray-badge" id="trayMail" hidden></span>
+      <button class="w98-tray-btn" id="traySound" type="button" title="Sound on" aria-pressed="true">
+        <img src="assets/speaker-32x32.png" alt="Sound" />
+      </button>
+      <span id="trayClock">12:00 PM</span>
+    </div>
+  </div>
+
+  <!-- ---------- start menu ---------- -->
+  <div class="w98-startmenu" id="startMenu" hidden role="menu" aria-label="Start menu">
+    <div class="w98-startmenu-side">
+      <span class="w98-startmenu-side-text">Windows<em>98</em></span>
+    </div>
+    <div class="w98-startmenu-items" id="startItems">
+      <!-- injected by desktop.js -->
+    </div>
+  </div>
+
+  <!-- ---------- windows are injected here ---------- -->
+
+  <!-- ============================================================
+       BOOT + DIAL-UP (overlays, removed as the sequence runs)
+       ============================================================ -->
+
+  <div class="w98-bios" id="bios" role="button" tabindex="0" aria-label="Start the computer">
+    <div class="w98-bios-lines" id="biosLines" aria-hidden="true"></div>
+    <div class="w98-bios-prompt" id="biosPrompt" hidden>
+      Press DEL to enter SETUP
+      <span class="w98-bios-cursor"></span>
+    </div>
+  </div>
+
+  <div class="w98-boot" id="boot" hidden>Starting Windows 98...</div>
+
+  <div class="w98-aol" id="aol" hidden>
+    <div class="w98-aol-card w98-raised">
+      <div class="w98-title">
+        <img src="assets/aol-desktop-icon.png" alt="" />
+        <span class="w98-title-text">America Online</span>
+      </div>
+      <div class="w98-aol-body">
+        <div class="w98-aol-main">
+          <div class="w98-aol-fields">
+            <h2 id="aolHeading">Sign On</h2>
+            <p class="aol-sub" id="aolSub">Connecting to the America Online network&hellip;</p>
+
+            <div class="w98-aol-art" id="aolArt" data-phase="connecting"></div>
+
+            <div class="w98-aol-status" id="aolStatus">Initialising modem&hellip;</div>
+
+            <div class="w98-aol-bar w98-sunken"><span id="aolBar"></span></div>
+          </div>
+
+          <!-- the supplied AOL side panel -->
+          <div class="w98-aol-side" aria-hidden="true"></div>
+        </div>
+
+        <div class="w98-aol-actions">
+          <button class="w98-btn" id="aolSkip" type="button">Skip</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="ascii.js"></script>
+<script src="api.js"></script>
+<script src="apps.js"></script>
+<script src="programs.js"></script>
+<script src="control.js"></script>
+<script src="mail.js"></script>
+<script src="letter.js"></script>
+<script src="find.js"></script>
+<script src="image.js"></script>
+<script src="sounds.js"></script>
+<script src="aim.js"></script>
+<script src="winamp.js"></script>
+<script src="desktop.js"></script>
+<script>
+
+function ready() {
+  document.getElementById("bios").hidden = true;
+  document.getElementById("boot").hidden = true;
+  document.getElementById("aol").hidden = true;
+}
+function signInAs(u, p) {
+  return new Promise(function (resolve) {
+    LDApps.openSignIn(function (user) { resolve(user || null); });
+    setTimeout(function () {
+      var inputs = document.querySelectorAll(".w98-signin input");
+      inputs[0].value = u;
+      inputs[1].value = p;
+      document.querySelector(".w98-signin-actions .w98-btn").click();
+      setTimeout(function () { resolve(null); }, 2400);
+    }, 300);
+  });
+}
+function winByTitle(re) {
+  return Array.prototype.filter.call(document.querySelectorAll(".w98-win"), function (w) {
+    return !w.hidden && re.test(w.querySelector(".w98-title-text").textContent);
+  })[0];
+}
+
+setTimeout(function () {
+  ready();
+  signInAs("root", "rootpassword1").then(function () {
+    LDPrograms.openPaint();
+    setTimeout(function () {
+      var win = winByTitle(/Paint/);
+      var canvas = win.querySelector(".paint-canvas");
+      var ctx = canvas.getContext("2d");
+      var out = {};
+
+      out.hasCanvas = !!canvas;
+      out.swatches = win.querySelectorAll(".paint-swatch").length;
+      out.sizes = win.querySelectorAll(".paint-size").length;
+
+      // start white
+      function px(x, y) {
+        var d = ctx.getImageData(x, y, 1, 1).data;
+        return [d[0], d[1], d[2]];
+      }
+      out.startsWithWhite = px(10, 10).join(",") === "255,255,255";
+
+      // pick red and draw a stroke with real mouse events
+      win.querySelector('.paint-swatch[data-colour="#ed1c24"]').click();
+      var rect = canvas.getBoundingClientRect();
+      function mouse(type, x, y) {
+        canvas.dispatchEvent(new MouseEvent(type, {
+          bubbles: true, clientX: rect.left + x, clientY: rect.top + y
+        }));
+      }
+      mouse("mousedown", 40, 40);
+      window.dispatchEvent(new MouseEvent("mousemove", {
+        bubbles: true, clientX: rect.left + 100, clientY: rect.top + 40
+      }));
+      window.dispatchEvent(new MouseEvent("mouseup", { bubbles: true }));
+
+      out.strokePainted = px(70, 40).join(",") === "237,28,36";
+
+      // erase over it
+      win.querySelector(".paint-tool").click();
+      var rect2 = canvas.getBoundingClientRect();
+      canvas.dispatchEvent(new MouseEvent("mousedown", {
+        bubbles: true, clientX: rect2.left + 70, clientY: rect2.top + 40
+      }));
+      // drag across so the erase definitely covers the sampled point
+      window.dispatchEvent(new MouseEvent("mousemove", {
+        bubbles: true, clientX: rect2.left + 90, clientY: rect2.top + 40
+      }));
+      window.dispatchEvent(new MouseEvent("mouseup", { bubbles: true }));
+      out.afterErasePixels = px(70, 40).join(",");
+      out.afterErase = px(70, 40).join(",") === "255,255,255";
+
+      // saving: stub the prompt and confirm it reaches the server
+      window.prompt = function () { return "art.png"; };
+      var saveBtn = Array.prototype.filter.call(win.querySelectorAll(".paint-tool"),
+        function (b) { return /Save/.test(b.textContent); })[0];
+      saveBtn.click();
+      setTimeout(function () {
+        LD.listFiles().then(function (res) {
+          out.saved = res.files.some(function (f) { return f.name === "art.png" && f.kind === "image"; });
+          out.titleChanged = /art\.png/.test(win.querySelector(".w98-title-text").textContent);
+          document.title = "PROBE" + JSON.stringify(out);
+        });
+      }, 1200);
+    }, 1200);
+  });
+}, 700);
+</script></body>
+</html>
